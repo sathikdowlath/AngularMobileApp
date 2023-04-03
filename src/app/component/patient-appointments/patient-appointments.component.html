@@ -1,0 +1,54 @@
+<mat-card *ngIf="this.appointmentListLength == 0">
+    <!--Appointment Page-->
+    <!-- <mat-card-header>Appointments</mat-card-header> -->
+    <i class="material-icons">add_box</i>
+    <h2>No Appointments Booked</h2>
+    <p>Please book your first appointment of Physical consultation as per your convenience</p>
+    <div>
+        <mat-card-actions>
+            <button mat-button mat-raised-button color="primary" routerLink="/bookApp">Book Now</button>            
+        </mat-card-actions>
+    </div>
+</mat-card>
+
+<mat-card *ngIf="this.appointmentListLength > 0">
+
+    <!-- <p>patient-appointments works!</p> -->
+    <button mat-button mat-raised-button color="primary" routerLink="/bookApp">Add Appointment</button>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th style="width: 25%">Doctor</th>
+                <th style="width: 25%">Date</th>
+                <th style="width: 10%">Time</th>
+                <th style="width: 25%">Reason</th>
+                <th style="width: 15%">Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let appointment of appointmentList">
+                <td>{{appointment.doctorName}}</td>
+                <td>{{appointment.appointmentDate}}</td>
+                <td>{{appointment.appointmentTime}}</td>
+                <td>{{appointment.reasonForVisit}}</td>
+                <td style="white-space: nowrap">
+                    <!-- <a routerLink="edit/{{user.id}}" class="btn btn-sm btn-primary mr-1">Edit</a> -->
+                    <button mat-mini-fab color="warn" (click)="deleteAppointment(appointment.id)" class="btn btn-sm btn-danger btn-delete-user"
+                    [disabled]="appointment.isDeleting">
+                        <mat-icon>delete</mat-icon>
+                      </button>
+                    <!-- <button (click)="deleteAppointment(appointment.id)" class="btn btn-sm btn-danger btn-delete-user"
+                        [disabled]="appointment.isDeleting">
+                        <span *ngIf="appointment.isDeleting" class="spinner-border spinner-border-sm"></span>
+                        <span *ngIf="!appointment.isDeleting">Delete</span>
+                    </button> -->
+                </td>
+            </tr>
+            <tr *ngIf="!appointmentList">
+                <td colspan="4" class="text-center">
+                    <span class="spinner-border spinner-border-lg align-center"></span>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</mat-card>

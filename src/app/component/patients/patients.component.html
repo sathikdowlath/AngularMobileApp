@@ -1,0 +1,62 @@
+<!-- <h4 class="card-header">Welcome</h4> -->
+<!-- <mat-tab-group>
+    <mat-tab label="Home"> Home </mat-tab>
+    <mat-tab label="Record"> <app-patient-records></app-patient-records> </mat-tab>
+    <mat-tab label="Appointment"> <app-patient-appointments></app-patient-appointments> </mat-tab>
+</mat-tab-group> -->
+    <mat-tab-group headerPosition="above">
+        <mat-tab>
+            <ng-template mat-tab-label>
+                <table>                
+                    <tr>
+                        <td>
+                             <mat-icon class="example-tab-icon">home</mat-icon>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Home
+                        </td>
+                    </tr>
+                </table>
+            </ng-template>
+            {{this.currentUser | json }}
+        </mat-tab>
+    
+        <mat-tab>
+            <ng-template mat-tab-label>
+                <table>
+                    <tr>
+                        <td>
+                            <!-- <mat-icon class="example-tab-icon">history</mat-icon> -->
+                            <mat-icon class="example-tab-icon">library_books</mat-icon>                                                
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Record
+                        </td>
+                    </tr>
+                </table>
+            </ng-template>
+            <app-patient-records></app-patient-records>
+        </mat-tab>
+    
+        <mat-tab>
+            <ng-template mat-tab-label>
+                <table>
+                    <tr>
+                        <td>
+                            <mat-icon class="example-tab-icon">calendar_month</mat-icon>                        
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Appointment
+                        </td>
+                    </tr>
+                </table>
+            </ng-template>
+            <app-patient-appointments></app-patient-appointments>
+        </mat-tab>
+    </mat-tab-group>
