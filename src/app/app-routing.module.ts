@@ -42,11 +42,11 @@ const routes: Routes = [
     component:DashboardComponent
   },
   {
-    path:'doctors',
+    path:'doctor',
     component:DoctorsComponent
   },
   {
-    path:'patients',
+    path:'patient',
     component:PatientsComponent
   },
   {
