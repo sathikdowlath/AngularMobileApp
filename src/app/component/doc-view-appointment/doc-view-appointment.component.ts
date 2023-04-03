@@ -62,7 +62,7 @@ export class DocViewAppointmentComponent implements OnInit {
           this.appointmentList.push(tempAppointment);
           this.appointmentListLength = this.appointmentList.length;
         });
-        //this.filterAppointmentsDate(this.tempDateString);
+        this.filterAppointmentsDate(this.tempDateString);
       });
   }
 
