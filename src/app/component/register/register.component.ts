@@ -67,12 +67,12 @@ export class RegisterComponent implements OnInit {
     }
 
     createCourse(newUser: Partial<User>, courseId?:string) {
-        var roleUrl = "";
-        if(newUser.role=="doctor"){
-            roleUrl = "Doctors";
-        } else {
-            roleUrl = "Users";
-        }        
+        var roleUrl = "Users";
+        // if(newUser.role=="doctor"){
+        //     roleUrl = "Doctors";
+        // } else {
+        //     roleUrl = "Users";
+        // }        
         if (courseId) {
             from(this.db.doc(roleUrl+`/${courseId}`).set(newUser));
         }

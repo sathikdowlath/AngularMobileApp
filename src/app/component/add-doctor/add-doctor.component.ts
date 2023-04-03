@@ -54,7 +54,7 @@ export class AddDoctorComponent implements OnInit {
 }
 
 addDoctor(newDoctor: Partial<Doctor>, docId?:string) {
-  var roleUrl = "Doctors";
+  var roleUrl = "Users";
   newDoctor.role = "doctor";
   if (docId) {
       from(this.db.doc(roleUrl+`/${docId}`).set(newDoctor));

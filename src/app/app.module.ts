@@ -35,7 +35,8 @@ import * as CanvasJSAngularChart from '../assets/canvasjs.angular.component';
 import { AddDoctorComponent } from './component/add-doctor/add-doctor.component';
 import { ListDoctorComponent } from './component/list-doctor/list-doctor.component';
 import { BookAppointmentComponent } from './component/book-appointment/book-appointment.component';
-import { DatePipe } from '@angular/common'
+import { DatePipe } from '@angular/common';
+import { DocViewAppointmentComponent } from './component/doc-view-appointment/doc-view-appointment.component'
 
 var CanvasJSChart = CanvasJSAngularChart.CanvasJSChart;
 
@@ -63,7 +64,8 @@ var CanvasJSChart = CanvasJSAngularChart.CanvasJSChart;
     CanvasJSChart,
     AddDoctorComponent,
     ListDoctorComponent,
-    BookAppointmentComponent
+    BookAppointmentComponent,
+    DocViewAppointmentComponent
   ],
   imports: [
     BrowserModule,

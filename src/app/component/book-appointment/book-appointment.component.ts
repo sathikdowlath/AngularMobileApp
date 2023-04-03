@@ -33,7 +33,8 @@ export class BookAppointmentComponent implements OnInit {
 
   
   
-  constructor(public datepipe: DatePipe,private router: Router,private alertService: AlertService,private _formBuilder: FormBuilder,private db: AngularFirestore,public appUserConfig: AppUserConfig) { }
+  constructor(public datepipe: DatePipe,private router: Router,private alertService: AlertService,
+    private _formBuilder: FormBuilder,private db: AngularFirestore,public appUserConfig: AppUserConfig) { }
 
   ngOnInit(): void {
     this.getDoctorsList();
@@ -45,10 +46,11 @@ export class BookAppointmentComponent implements OnInit {
   });
   }
 
-  getDoctorsList() {
-    console.log("22222222");
+  getDoctorsList() {    
     this.doctorList = [];
-    this.db.collection("Doctors").get().subscribe(snaps => {      
+    this.db.collection("Users",
+    ref => ref.where("role","==","doctor")
+    ).get().subscribe(snaps => {      
       snaps.forEach(snap => {
         var tempDoctors : Doctor = null;
         tempDoctors = snap.data();  
@@ -82,7 +84,7 @@ export class BookAppointmentComponent implements OnInit {
     newAppointment.appointmentDate = this.datepipe.transform(newAppointment.appointmentDate, 'dd-MM-yyyy');
     from(this.db.collection(appointmentUrl).add(newAppointment));
       this.alertService.success('Registration successful', { keepAfterRouteChange: true });
-      this.router.navigate(["/patients"]);    
+      this.router.navigate(["/patient"]);    
   }
 
   // Choose ROLE using select dropdown

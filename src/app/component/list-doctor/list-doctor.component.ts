@@ -20,7 +20,8 @@ export class ListDoctorComponent implements OnInit {
   getDoctorsList() {
     console.log("22222222");
     this.doctorList = [];
-    this.db.collection("Doctors").get().subscribe(snaps => {      
+    this.db.collection("Users",
+    ref => ref.where("role","==","doctor")).get().subscribe(snaps => {      
       snaps.forEach(snap => {
         var tempDoctors : Doctor = null;
         tempDoctors = snap.data();  
@@ -32,7 +33,7 @@ export class ListDoctorComponent implements OnInit {
   }
 
   deleteDoctor(docId:string){
-    return this.db.doc(`Doctors/${docId}`).delete().then(()=> {
+    return this.db.doc(`Users/${docId}`).delete().then(()=> {
       console.log("Document successfully deleted!");
       this.getDoctorsList();
     }).catch((error)=>{

@@ -1,54 +1,29 @@
 <mat-sidenav-container fullscreen>
   <mat-sidenav #start (click)="start.close()">
     <mat-nav-list>
-      <!-- <a mat-list-item routerLink="/dashboard" *ngIf="this.appUser.role == 'admin' || this.appUser.role == 'doctor' " > -->
-        <a mat-list-item routerLink="/dashboard">
+      <a mat-list-item routerLink="/dashboard" *ngIf="this.appUserConfig.role == 'admin'">
         <mat-icon></mat-icon>
-        <span>Dashboard</span>        
+        <span>Dashboard</span>
       </a>
-      <a mat-list-item routerLink="/doctor">
+      <a mat-list-item routerLink="/doctor" *ngIf="this.appUserConfig.role == 'doctor'">
         <mat-icon></mat-icon>
         <span>Doctors</span>
       </a>
-      <a mat-list-item routerLink="/doctorslist">
+      <a mat-list-item routerLink="/doctorslist" *ngIf="this.appUserConfig.role == 'admin'">
         <mat-icon></mat-icon>
         <span>Doctors List</span>
       </a>
-      <a mat-list-item routerLink="/patient">
+      <a mat-list-item routerLink="/patient" *ngIf="this.appUserConfig.role == 'patient'">
         <mat-icon>library_books</mat-icon>
         <i class="material-icons">wheelchair_pickup</i>
         <span>Patients</span>
-      </a>
-      <!-- <a mat-list-item routerLink="/">
-        <mat-icon>library_books</mat-icon>
-        <span>Courses</span>
-      </a>
-
-      <a mat-list-item routerLink="/create-user">
-        <mat-icon>add_circle_outline</mat-icon>
-        <span>Create user</span>
-      </a>
-
-      <a mat-list-item routerLink="about">
-        <mat-icon>question_answer</mat-icon>
-        <span>About</span>
-      </a> -->
-      
-      <!-- <a mat-list-item routerLink="login">
-        <mat-icon>person_add</mat-icon>
-        <span>Register</span>
-      </a> -->
-
-      <!-- <a mat-list-item routerLink="login">
-        <mat-icon>account_circle</mat-icon>
-        <span>Login</span>
-      </a> -->
-      <a mat-list-item routerLink="users">
-        <mat-icon>quick_contacts_mail</mat-icon>        
+      </a>      
+      <a mat-list-item routerLink="users" *ngIf="this.appUserConfig.role == 'admin'">
+        <mat-icon>quick_contacts_mail</mat-icon>
         <span>Manage User</span>
       </a>
 
-      <a mat-list-item routerLink="/Login">
+      <a mat-list-item (click)="logOut()">
         <mat-icon>exit_to_app</mat-icon>
         <span>Logout</span>
       </a>

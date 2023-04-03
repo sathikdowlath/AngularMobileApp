@@ -1,5 +1,10 @@
 <div [@.disabled]="true">
     <mat-tab-group dynamicHeight>
+      <mat-tab label="Appointments">
+        <ng-template matTabContent>
+          <app-doc-view-appointment></app-doc-view-appointment>
+        </ng-template>
+      </mat-tab>
       <mat-tab label="Yearly">
         <ng-template matTabContent>
           <canvasjs-chart

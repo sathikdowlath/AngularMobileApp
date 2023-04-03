@@ -5,19 +5,13 @@
 export const environment = {
   production: false,
   firebase: {    
-    //apiKey: "AIzaSyB9xHYeMWnlnZpNXqd0yjJqERGmoBESY-w",
-    //authDomain: "sathik-test.firebaseapp.com",
-    //projectId: "sathik-test",
-    //storageBucket: "sathik-test.appspot.com",
-    //messagingSenderId: "237333223541",
-    //appId: "1:237333223541:web:e3c51c4315dce7e486c03c"
+    apiKey: "AIzaSyB9xHYeMWnlnZpNXqd0yjJqERGmoBESY-w",
+    authDomain: "sathik-test.firebaseapp.com",
+    projectId: "sathik-test",
+    storageBucket: "sathik-test.appspot.com",
+    messagingSenderId: "237333223541",
+    appId: "1:237333223541:web:e3c51c4315dce7e486c03c"
     
-      apiKey: "AIzaSyCey_yS2VoHNH7qWwM0HrBjSiLLpQccXNs",
-      authDomain: "doctor-patient-tracker-43206.firebaseapp.com",
-      projectId: "doctor-patient-tracker-43206",
-      storageBucket: "doctor-patient-tracker-43206.appspot.com",
-      messagingSenderId: "424174309751",
-      appId: "1:424174309751:web:fa2063d9e8a6a9af8a9172"
   },
   //apiUrl: 'http://localhost:4000',
   api: {

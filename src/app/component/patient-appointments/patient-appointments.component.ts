@@ -66,9 +66,10 @@ export class PatientAppointmentsComponent implements OnInit {
   }
 
   getDoctorsList() {
-    console.log("22222222");
+    
     this.doctorList = [];
-    this.db.collection("Doctors").get().subscribe(snaps => {      
+    this.db.collection("Users",
+    ref => ref.where("role","==","doctor")).get().subscribe(snaps => {      
       snaps.forEach(snap => {
         var tempDoctors : Doctor = null;
         tempDoctors = snap.data();  

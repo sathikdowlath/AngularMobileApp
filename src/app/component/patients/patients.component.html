@@ -7,20 +7,20 @@
     <mat-tab-group headerPosition="above">
         <mat-tab>
             <ng-template mat-tab-label>
-                <table>                
+                <table>
                     <tr>
                         <td>
-                             <mat-icon class="example-tab-icon">home</mat-icon>
+                            <mat-icon class="example-tab-icon">calendar_month</mat-icon>                        
                         </td>
                     </tr>
                     <tr>
                         <td>
-                            Home
+                            Appointment
                         </td>
                     </tr>
                 </table>
             </ng-template>
-            {{this.currentUser | json }}
+            <app-patient-appointments></app-patient-appointments>
         </mat-tab>
     
         <mat-tab>
@@ -41,22 +41,22 @@
             </ng-template>
             <app-patient-records></app-patient-records>
         </mat-tab>
-    
         <mat-tab>
             <ng-template mat-tab-label>
-                <table>
+                <table>                
                     <tr>
                         <td>
-                            <mat-icon class="example-tab-icon">calendar_month</mat-icon>                        
+                             <mat-icon class="example-tab-icon">home</mat-icon>
                         </td>
                     </tr>
                     <tr>
                         <td>
-                            Appointment
+                            Home
                         </td>
                     </tr>
                 </table>
             </ng-template>
-            <app-patient-appointments></app-patient-appointments>
+            {{this.currentUser | json }}
         </mat-tab>
+        
     </mat-tab-group>
