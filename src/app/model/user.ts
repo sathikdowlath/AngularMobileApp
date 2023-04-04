@@ -8,6 +8,11 @@ export class User {
     role?:string;
 }
 
+export class Medicine {
+    id?: string;
+    medicineName?: string;    
+}
+
 export class Appointment {
     id? : string;
     appointmentDate ? : string;
@@ -16,6 +21,7 @@ export class Appointment {
     patientId  ? : string;
     reasonForVisit ? : string;
     doctorName ? :  string;
+    status? :  string;
 }
 
 export class Doctor {

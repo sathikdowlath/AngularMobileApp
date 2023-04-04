@@ -1,0 +1,21 @@
+<p>add-medicine works!</p>
+<div class="card">
+    <h4 class="card-header">Add Medicine</h4>
+    <div class="card-body">
+        <form [formGroup]="form" (ngSubmit)="onSubmit()">
+            <div class="mb-3">
+                <label class="form-label">Medicine Name</label>
+                <input type="text" formControlName="medicineName" class="form-control"
+                    [ngClass]="{ 'is-invalid': submitted && f.medicineName.errors }" />
+                <div *ngIf="submitted && f.medicineName.errors" class="invalid-feedback">
+                    <div *ngIf="f.medicineName.errors.required">First Name is required</div>
+                </div>
+            </div>
+            <button [disabled]="loading" class="btn btn-primary">
+                <span *ngIf="loading" class="spinner-border spinner-border-sm me-1"></span>
+                Save
+            </button>
+            <a routerLink="./medicines" class="btn btn-link">Cancel</a>
+        </form>
+    </div>
+</div>

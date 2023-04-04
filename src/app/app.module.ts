@@ -36,7 +36,10 @@ import { AddDoctorComponent } from './component/add-doctor/add-doctor.component'
 import { ListDoctorComponent } from './component/list-doctor/list-doctor.component';
 import { BookAppointmentComponent } from './component/book-appointment/book-appointment.component';
 import { DatePipe } from '@angular/common';
-import { DocViewAppointmentComponent } from './component/doc-view-appointment/doc-view-appointment.component'
+import { DocViewAppointmentComponent } from './component/doc-view-appointment/doc-view-appointment.component';
+import { MedicinesComponent } from './component/medicines/medicines.component';
+import { AddMedicineComponent } from './component/add-medicine/add-medicine.component';
+import { AddPrescriptionComponent } from './component/add-prescription/add-prescription.component'
 
 var CanvasJSChart = CanvasJSAngularChart.CanvasJSChart;
 
@@ -65,7 +68,10 @@ var CanvasJSChart = CanvasJSAngularChart.CanvasJSChart;
     AddDoctorComponent,
     ListDoctorComponent,
     BookAppointmentComponent,
-    DocViewAppointmentComponent
+    DocViewAppointmentComponent,
+    MedicinesComponent,
+    AddMedicineComponent,
+    AddPrescriptionComponent
   ],
   imports: [
     BrowserModule,

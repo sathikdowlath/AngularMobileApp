@@ -1,0 +1,30 @@
+<h1>Medicines List</h1>
+<a routerLink="/addMedicine" class="btn btn-sm btn-success mb-2">Add Medicine</a>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th style="width: 75%">Medicine Name</th>            
+            <th style="width: 25%"></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let med of medicineList">
+            <td>{{med.medicineName}}</td>
+            <td style="white-space: nowrap">
+                <!-- <button (click)="deleteMedicine(med.id)" class="btn btn-sm btn-danger btn-delete-user" [disabled]="med.isDeleting">
+                    <span *ngIf="med.isDeleting" class="spinner-border spinner-border-sm"></span>
+                    <span *ngIf="!med.isDeleting">Delete</span>
+                </button> -->
+                <button mat-mini-fab color="warn" (click)="deleteMedicine(med.id)" class="btn btn-sm btn-danger btn-delete-user"
+                    [disabled]="med.isDeleting">
+                        <mat-icon>delete</mat-icon>
+                      </button>
+            </td>
+        </tr>
+        <tr *ngIf="!medicineList">
+            <td colspan="4" class="text-center">
+                <span class="spinner-border spinner-border-lg align-center"></span>
+            </td>
+        </tr>
+    </tbody>
+</table>

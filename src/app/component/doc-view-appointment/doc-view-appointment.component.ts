@@ -1,7 +1,9 @@
 import { DatePipe } from '@angular/common';
+import { QueryValueType } from '@angular/compiler/src/core';
 import { Component, OnInit } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { AppUserConfig } from 'src/app/app-configuration';
 import { Appointment, User } from 'src/app/model/user';
 
@@ -20,7 +22,7 @@ export class DocViewAppointmentComponent implements OnInit {
   submitted = false;
   loading = false;
   tempDateString: string = "";
-  constructor(public datepipe: DatePipe, private _formBuilder: FormBuilder,
+  constructor(private router: Router, public datepipe: DatePipe, private _formBuilder: FormBuilder,
     private db: AngularFirestore, private appUserConfig: AppUserConfig) { }
 
   ngOnInit(): void {
@@ -39,7 +41,7 @@ export class DocViewAppointmentComponent implements OnInit {
     }
     this.loading = true;
     this.tempDateString = this.datepipe.transform(this.form.value.appointmentDate, 'dd-MM-yyyy');
-    this.filterAppointmentsDate(this.tempDateString);   
+    this.filterAppointmentsDate(this.tempDateString);
     this.loading = false;
   }
 
@@ -87,5 +89,9 @@ export class DocViewAppointmentComponent implements OnInit {
         this.getAppointmentDetails();
       });
     console.log(this.patientList);
+  }
+
+  prescriptionDetails(appointId: string) {
+    this.router.navigate(["/addPrescription", appointId]);
   }
 }

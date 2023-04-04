@@ -17,6 +17,9 @@ import { ManageUserComponent } from './component/manage-user/manage-user.compone
 import { ListDoctorComponent } from './component/list-doctor/list-doctor.component';
 import { AddDoctorComponent } from './component/add-doctor/add-doctor.component';
 import { BookAppointmentComponent } from './component/book-appointment/book-appointment.component';
+import { MedicinesComponent } from './component/medicines/medicines.component';
+import { AddMedicineComponent } from './component/add-medicine/add-medicine.component';
+import { AddPrescriptionComponent } from './component/add-prescription/add-prescription.component';
 
 const routes: Routes = [
   {
@@ -85,6 +88,18 @@ const routes: Routes = [
     path:'bookApp',
     component: BookAppointmentComponent
   },
+  {
+    path:'medicines',
+    component: MedicinesComponent
+  },
+  {
+    path:'addMedicine',
+    component: AddMedicineComponent
+  },
+  {
+    path:'addPrescription/:appointId',
+    component: AddPrescriptionComponent
+  },  
   {
     path: '**',
     redirectTo: '/'

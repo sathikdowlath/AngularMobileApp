@@ -82,6 +82,7 @@ export class BookAppointmentComponent implements OnInit {
     var appointmentUrl = "Appointments";
     newAppointment.patientId = this.appUserConfig.id;
     newAppointment.appointmentDate = this.datepipe.transform(newAppointment.appointmentDate, 'dd-MM-yyyy');
+    newAppointment.status = "open";
     from(this.db.collection(appointmentUrl).add(newAppointment));
       this.alertService.success('Registration successful', { keepAfterRouteChange: true });
       this.router.navigate(["/patient"]);    
