@@ -40,7 +40,7 @@ import { DocViewAppointmentComponent } from './component/doc-view-appointment/do
 import { MedicinesComponent } from './component/medicines/medicines.component';
 import { AddMedicineComponent } from './component/add-medicine/add-medicine.component';
 import { AddPrescriptionComponent } from './component/add-prescription/add-prescription.component'
-
+import { FormsModule } from '@angular/forms';
 var CanvasJSChart = CanvasJSAngularChart.CanvasJSChart;
 
 @NgModule({
@@ -74,6 +74,7 @@ var CanvasJSChart = CanvasJSAngularChart.CanvasJSChart;
     AddPrescriptionComponent
   ],
   imports: [
+    FormsModule,
     BrowserModule,
     BrowserAnimationsModule,
     // MatMenuModule,

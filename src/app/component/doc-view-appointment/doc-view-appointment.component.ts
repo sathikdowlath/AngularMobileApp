@@ -6,6 +6,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AppUserConfig } from 'src/app/app-configuration';
 import { Appointment, User } from 'src/app/model/user';
+import { UtilitiesService } from 'src/app/services/utilities.service';
 
 @Component({
   selector: 'app-doc-view-appointment',
@@ -22,7 +23,7 @@ export class DocViewAppointmentComponent implements OnInit {
   submitted = false;
   loading = false;
   tempDateString: string = "";
-  constructor(private router: Router, public datepipe: DatePipe, private _formBuilder: FormBuilder,
+  constructor(private _utilityService : UtilitiesService,private router: Router, public datepipe: DatePipe, private _formBuilder: FormBuilder,
     private db: AngularFirestore, private appUserConfig: AppUserConfig) { }
 
   ngOnInit(): void {
@@ -71,6 +72,11 @@ export class DocViewAppointmentComponent implements OnInit {
   getPatientDetails(patientId: string) {
     var patientName: User = null;
     patientName = this.patientList.filter(d => d.id == patientId)[0];
+    return patientName;
+  }
+  getPatientName(patientId: string) {
+    var patientName: User = null;
+    patientName = this.patientList.filter(d => d.id == patientId)[0];
     return patientName.lastName + ", " + patientName.firstName;
   }
 
@@ -91,7 +97,8 @@ export class DocViewAppointmentComponent implements OnInit {
     console.log(this.patientList);
   }
 
-  prescriptionDetails(appointId: string) {
-    this.router.navigate(["/addPrescription", appointId]);
+  prescriptionDetails(appointData: Appointment) {
+    this._utilityService.setPatientAppointmnetData(this.getPatientDetails(appointData.patientId),appointData);
+    this.router.navigate(["/addPrescription"]);
   }
 }

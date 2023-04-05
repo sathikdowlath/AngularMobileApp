@@ -97,7 +97,7 @@ const routes: Routes = [
     component: AddMedicineComponent
   },
   {
-    path:'addPrescription/:appointId',
+    path:'addPrescription',
     component: AddPrescriptionComponent
   },  
   {
