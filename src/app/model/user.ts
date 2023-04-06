@@ -13,6 +13,21 @@ export class Medicine {
     medicineName?: string;    
 }
 
+export class Prescription {
+    temperature ? : string;
+    pulse ? : string;
+    remarks ? : string;
+    medicines ? : AddMedicine[];
+    appointmentId ? : string;
+}
+
+export class AddMedicine {
+    medicineName ? : string;
+    morning ? : boolean;
+    noon ? : boolean;
+    night ? : boolean;
+
+}
 export class Appointment {
     id? : string;
     appointmentDate ? : string;
@@ -22,6 +37,7 @@ export class Appointment {
     reasonForVisit ? : string;
     doctorName ? :  string;
     status? :  string;
+    prescriptionId ? : string;
 }
 
 export class Doctor {

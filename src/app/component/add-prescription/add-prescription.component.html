@@ -34,8 +34,24 @@ asddaaaaaaaaaa
         </th>
       </tr>
       <tr>
+        <th>
+          <label class="form-label">Temperature</label>
+          <input type="text" [(ngModel)]="temperature" class="form-control" />
+        </th>
+        <th>
+          <label class="form-label">Pulse</label>
+          <input type="text" [(ngModel)]="pulse" class="form-control" />
+        </th>
+      </tr>
+      <tr>
         <th colspan="2">
           Reason for Visit :  {{ this.appointmentDetails.reasonForVisit }}           
+        </th>        
+      </tr>
+      <tr>
+        <th colspan="2">
+          <label class="form-label">Remarks</label>
+          <input type="text" [(ngModel)]="remarks" class="form-control" />
         </th>        
       </tr>
     </thead>
