@@ -32,9 +32,10 @@ export class PatientAppointmentsComponent implements OnInit {
             tempAppointment = snap.data();
             tempAppointment.id = snap.id;
             tempAppointment.doctorName = this.getDoctorName(tempAppointment.doctorId);            
-            this.appointmentList.push(tempAppointment);
-            this.appointmentListLength = this.appointmentList.length;
-          })
+            this.appointmentList.push(tempAppointment);            
+          });
+          this.appointmentList = this.appointmentList.filter(a=>a.status=='open');
+          this.appointmentListLength = this.appointmentList.length;
       });      
   }
   getDoctorName(docId : string){
