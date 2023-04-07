@@ -47,8 +47,10 @@ export class DocViewAppointmentComponent implements OnInit {
   }
 
   filterAppointmentsDate(dateString: string) {
-    this.appointmentListFilter = this.appointmentList.filter(d => d.appointmentDate == dateString);
-  }
+    this.appointmentListFilter = this.appointmentList.filter(d => d.appointmentDate == dateString && d.status=='open');
+    this.appointmentListFilter = this.appointmentListFilter.sort((a,b)=> a.appointmentTime.localeCompare(b.appointmentTime))
+  } 
+
 
   getAppointmentDetails() {
     this.appointmentList = [];
