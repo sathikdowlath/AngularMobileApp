@@ -1,0 +1,46 @@
+mat-card-header {
+    display: flex;
+    justify-content: left;
+    font-family: sans-serif;
+    font-size: 20px;
+    padding: 10px 10px 10px 10px;
+
+}
+
+.above {
+    margin-bottom: 10px;
+}
+
+i {
+    display: flex;
+    justify-content: center;
+    font-size: 20rem;
+    opacity: 30%;
+
+}
+
+h2 {
+    display: flex;
+    justify-content: center;
+
+    color: rgb(16, 17, 17);
+}
+
+p {
+    display: flex;
+    justify-content: center;
+    padding-left: 20%;
+    padding-right: 18%;
+    padding-bottom: 18px;
+    color: rgb(47, 48, 48);
+}
+
+div {
+    display: flex;
+    justify-content: center;
+}
+
+th {
+    background-color: #04AA6D;
+    color: white;
+}

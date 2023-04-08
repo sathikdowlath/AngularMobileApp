@@ -1,0 +1,62 @@
+<p>add-doctor works!</p>
+<div class="card">
+    <h4 class="card-header">Add Doctor</h4>
+    <div class="card-body">
+        <form [formGroup]="form" (ngSubmit)="onSubmit()">
+            <div class="mb-3">
+                <label class="form-label">First Name</label>
+                <input type="text" formControlName="firstName" class="form-control"
+                    [ngClass]="{ 'is-invalid': submitted && f.firstName.errors }" />
+                <div *ngIf="submitted && f.firstName.errors" class="invalid-feedback">
+                    <div *ngIf="f.firstName.errors.required">First Name is required</div>
+                </div>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Last Name</label>
+                <input type="text" formControlName="lastName" class="form-control"
+                    [ngClass]="{ 'is-invalid': submitted && f.lastName.errors }" />
+                <div *ngIf="submitted && f.lastName.errors" class="invalid-feedback">
+                    <div *ngIf="f.lastName.errors.required">Last Name is required</div>
+                </div>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Username</label>
+                <input type="text" formControlName="userName" class="form-control"
+                    [ngClass]="{ 'is-invalid': submitted && f.userName.errors }" />
+                <div *ngIf="submitted && f.userName.errors" class="invalid-feedback">
+                    <div *ngIf="f.userName.errors.required">UserName is required</div>
+                </div>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Password</label>
+                <input type="password" formControlName="password" class="form-control"
+                    [ngClass]="{ 'is-invalid': submitted && f.password.errors }" />
+                <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                    <div *ngIf="f.password.errors.required">Password is required</div>
+                    <div *ngIf="f.password.errors.minlength">Password must be at least 5 characters</div>
+                </div>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Specialist</label>
+                <input type="text" formControlName="specialist" class="form-control"
+                    [ngClass]="{ 'is-invalid': submitted && f.specialist.errors }" />
+                <div *ngIf="submitted && f.specialist.errors" class="invalid-feedback">
+                    <div *ngIf="f.specialist.errors.required">specialist is required</div>
+                </div>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Degree</label>
+                <input type="text" formControlName="degree" class="form-control"
+                    [ngClass]="{ 'is-invalid': submitted && f.degree.errors }" />
+                <div *ngIf="submitted && f.degree.errors" class="invalid-feedback">
+                    <div *ngIf="f.degree.errors.required">degree is required</div>
+                </div>
+            </div>
+            <button [disabled]="loading" class="btn btn-primary">
+                <span *ngIf="loading" class="spinner-border spinner-border-sm me-1"></span>
+                Submit
+            </button>
+            <a routerLink="/doctorslist" class="btn btn-link">Cancel</a>
+        </form>
+    </div>
+</div>
