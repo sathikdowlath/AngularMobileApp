@@ -7,6 +7,10 @@ mat-card-header {
 
 }
 
+.above {
+    margin-bottom: 10px;
+}
+
 i {
     display: flex;
     justify-content: center;
@@ -34,4 +38,9 @@ p {
 div {
     display: flex;
     justify-content: center;
+}
+
+th {
+    background-color: #04AA6D;
+    color: white;
 }

@@ -26,7 +26,7 @@ export class AddDoctorComponent implements OnInit {
   ngOnInit(): void {
     this.form = this.formBuilder.group({
       firstName: ['', Validators.required],
-      lastName: ['', Validators.required],
+      lastName: [''],
       userName: ['', Validators.required],
       password: ['', [Validators.required, Validators.minLength(5)]],
       specialist: ['',Validators.required],

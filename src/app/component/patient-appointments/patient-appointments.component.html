@@ -14,7 +14,7 @@
 <mat-card *ngIf="this.appointmentListLength > 0">
 
     <!-- <p>patient-appointments works!</p> -->
-    <button mat-button mat-raised-button color="primary" routerLink="/bookApp">Add Appointment</button>
+    <button class="above" mat-button mat-raised-button color="primary" routerLink="/bookApp">Add Appointment</button>
     <table class="table table-striped">
         <thead>
             <tr>
@@ -33,8 +33,8 @@
                 <td>{{appointment.reasonForVisit}}</td>
                 <td style="white-space: nowrap">
                     <!-- <a routerLink="edit/{{user.id}}" class="btn btn-sm btn-primary mr-1">Edit</a> -->
-                    <button mat-mini-fab color="warn" (click)="deleteAppointment(appointment.id)" class="btn btn-sm btn-danger btn-delete-user"
-                    [disabled]="appointment.isDeleting">
+                    <button mat-mini-fab color="warn" (click)="deleteAppointment(appointment.id)"
+                        class="btn btn-sm btn-danger btn-delete-user" [disabled]="appointment.isDeleting">
                         <mat-icon>delete</mat-icon>
                       </button>
                     <!-- <button (click)="deleteAppointment(appointment.id)" class="btn btn-sm btn-danger btn-delete-user"

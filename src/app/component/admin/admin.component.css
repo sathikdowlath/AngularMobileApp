@@ -1,0 +1,29 @@
+* {
+    margin: 30px 40px 30px 20px;
+}
+
+p {
+    padding-left: 15px;
+    padding-right: 15px;
+    font-size: 18px;
+    font-family: cursive;
+    text-align: justify;
+    text-shadow: 2px 2px rgb(219, 205, 158);
+}
+
+div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+button {
+    margin: 10px 10px 10px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    padding: 20px 20px 20px 20px;
+    font-size: 1.5rem;
+}

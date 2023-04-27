@@ -79,7 +79,7 @@ export class DocViewAppointmentComponent implements OnInit {
   getPatientName(patientId: string) {
     var patientName: User = null;
     patientName = this.patientList.filter(d => d.id == patientId)[0];
-    return patientName.lastName + ", " + patientName.firstName;
+    return patientName.firstName + " " + patientName.lastName;
   }
 
   getDoctorsList() {

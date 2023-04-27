@@ -1,0 +1,17 @@
+.card {
+    margin: 30px 10px 30px 10px;
+}
+
+h4 {
+    background-color: #04AA6D;
+    color: white;
+}
+
+button {
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+.two {
+    text-align: center;
+}

@@ -1,0 +1,19 @@
+h1 {
+    margin-left: 10px;
+}
+
+a {
+    margin-left: 10px;
+}
+
+th {
+    background-color: #04AA6D;
+    color: white;
+}
+
+div {
+    margin: 10px 10px 10px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

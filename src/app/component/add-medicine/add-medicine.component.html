@@ -1,4 +1,3 @@
-<p>add-medicine works!</p>
 <div class="card">
     <h4 class="card-header">Add Medicine</h4>
     <div class="card-body">
@@ -11,11 +10,13 @@
                     <div *ngIf="f.medicineName.errors.required">First Name is required</div>
                 </div>
             </div>
-            <button [disabled]="loading" class="btn btn-primary">
-                <span *ngIf="loading" class="spinner-border spinner-border-sm me-1"></span>
-                Save
-            </button>
-            <a routerLink="/medicines" class="btn btn-link">Cancel</a>
+            <div class="two">
+                <button [disabled]="loading" class="btn btn-primary">
+                    <span *ngIf="loading" class="spinner-border spinner-border-sm me-1"></span>
+                    Save
+                </button>&nbsp;
+                <button routerLink="/medicines" mat-raised-button color="warn">Cancel</button>
+            </div>
         </form>
     </div>
 </div>

@@ -12,12 +12,12 @@ asddaaaaaaaaaa
     <thead>
       <tr>
         <th>
-          First name :  {{ this.patientDetails.firstName }}           
+          First name : {{ this.patientDetails.firstName }}
         </th>
         <th>
           Last name : {{ this.patientDetails.lastName }}
         </th>
-      </tr>      
+      </tr>
     </thead>
   </table>
 </mat-card>
@@ -27,7 +27,7 @@ asddaaaaaaaaaa
     <thead>
       <tr>
         <th>
-          Date :  {{ this.appointmentDetails.appointmentDate }}           
+          Date : {{ this.appointmentDetails.appointmentDate }}
         </th>
         <th>
           Time : {{ this.appointmentDetails.appointmentTime }}
@@ -45,14 +45,14 @@ asddaaaaaaaaaa
       </tr>
       <tr>
         <th colspan="2">
-          Reason for Visit :  {{ this.appointmentDetails.reasonForVisit }}           
-        </th>        
+          Reason for Visit : {{ this.appointmentDetails.reasonForVisit }}
+        </th>
       </tr>
       <tr>
         <th colspan="2">
           <label class="form-label">Remarks</label>
           <input type="text" [(ngModel)]="remarks" class="form-control" />
-        </th>        
+        </th>
       </tr>
     </thead>
   </table>
@@ -81,6 +81,21 @@ asddaaaaaaaaaa
           <div class="mb-3">
             <select class="form-control" name="{{dynamic.medicine}}" [(ngModel)]="dynamic.medicine">
               <option value="">Choose Medicine</option>
+              <option value="">Paracetemol</option>
+              <option value="">Metformin</option>
+              <option value="">Zestril</option>
+              <option value="">Synthroid</option>
+              <option value="">Glucophage</option>
+              <option value="">Zocor</option>
+              <option value="">Prilosec</option>
+              <option value="">Norvasc</option>
+              <option value="">Lopressor</option>
+              <option value="">Ventolin</option>
+              <option value="">Metoprolol</option>
+              <option value="">Acetaminophen</option>
+              <option value="">Albuterol</option>
+              <option value="">Hydrocodone</option>
+              <option value="">Gabapentin</option>
               <option *ngFor="let med of medicineList" [ngValue]="med.medicineName">{{med.medicineName}}</option>
             </select>
           </div>
@@ -97,11 +112,11 @@ asddaaaaaaaaaa
       </tr>
     </tbody>
   </table>
-  <div class="align-center">
-    <button (click)="savePrescription()" class="btn btn-primary">      
+  <div class="two">
+    <button (click)="savePrescription()" class="btn btn-primary">
       Save
-    </button>
-    <a routerLink="/dashboard" class="btn btn-link">Cancel</a>    
+    </button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <button routerLink="/dashboard" class="btn btn-danger">Cancel</button>
   </div>
 </mat-card>
 

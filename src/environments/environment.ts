@@ -4,14 +4,14 @@
 
 export const environment = {
   production: false,
-  firebase: {    
-    apiKey: "AIzaSyB9xHYeMWnlnZpNXqd0yjJqERGmoBESY-w",
-    authDomain: "sathik-test.firebaseapp.com",
-    projectId: "sathik-test",
-    storageBucket: "sathik-test.appspot.com",
-    messagingSenderId: "237333223541",
-    appId: "1:237333223541:web:e3c51c4315dce7e486c03c"
-    
+  firebase: {
+    apiKey: "AIzaSyCV_f_j4yWlZfUFjj_8qcT99OJ-eHdA25c",
+    authDomain: "main-681c9.firebaseapp.com",
+    projectId: "main-681c9",
+    storageBucket: "main-681c9.appspot.com",
+    messagingSenderId: "1092281877119",
+    appId: "1:1092281877119:web:5b9a7da42d5942b022b54a"
+
   },
   //apiUrl: 'http://localhost:4000',
   api: {
