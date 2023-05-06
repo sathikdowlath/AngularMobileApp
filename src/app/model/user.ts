@@ -19,6 +19,7 @@ export class Prescription {
     remarks ? : string;
     medicines ? : AddMedicine[];
     appointmentId ? : string;
+    id? : string;
 }
 
 export class AddMedicine {
@@ -28,6 +29,12 @@ export class AddMedicine {
     night ? : boolean;
 
 }
+
+export class AppointmentWithPrecription {
+    Appointment? : Appointment;
+    Prescription? : Prescription;
+}
+
 export class Appointment {
     id? : string;
     appointmentDate ? : string;
