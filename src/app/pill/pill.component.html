@@ -1,1 +1,30 @@
-<p>pill works!</p>
+<mat-card class="container-header">Hey <b>{{this.currentUser.firstName}} {{this.currentUser.lastName}}</b>, choose your
+    medications in accordance with
+    your doctor's prescription so
+    that you don't forget to
+    take them.</mat-card>
+
+
+<mat-card class="container-card">
+    <mat-card-title>Pill Reminder</mat-card-title>
+    <mat-card-content class="middile">
+        <mat-form-field class="content">
+            <mat-label>Select a medication</mat-label>
+            <mat-select [(ngModel)]="selectedMedication">
+                <mat-option *ngFor="let med of medicineList" [value]="med.medicineName">
+                    {{med.medicineName}}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+
+        <mat-form-field class="content">
+            <mat-label>Select a remainder time</mat-label>
+            <mat-select [(ngModel)]="selectedTime">
+                <mat-option *ngFor="let time of times" [value]="time">
+                    {{time}}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+    </mat-card-content>
+    <button mat-raised-button color="accent" (click)=" setReminder()">Set Reminder</button>
+</mat-card>

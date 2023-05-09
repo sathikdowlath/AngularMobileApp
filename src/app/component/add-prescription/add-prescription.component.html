@@ -81,21 +81,6 @@ asddaaaaaaaaaa
           <div class="mb-3">
             <select class="form-control" name="{{dynamic.medicine}}" [(ngModel)]="dynamic.medicine">
               <option value="">Choose Medicine</option>
-              <option value="">Paracetemol</option>
-              <option value="">Metformin</option>
-              <option value="">Zestril</option>
-              <option value="">Synthroid</option>
-              <option value="">Glucophage</option>
-              <option value="">Zocor</option>
-              <option value="">Prilosec</option>
-              <option value="">Norvasc</option>
-              <option value="">Lopressor</option>
-              <option value="">Ventolin</option>
-              <option value="">Metoprolol</option>
-              <option value="">Acetaminophen</option>
-              <option value="">Albuterol</option>
-              <option value="">Hydrocodone</option>
-              <option value="">Gabapentin</option>
               <option *ngFor="let med of medicineList" [ngValue]="med.medicineName">{{med.medicineName}}</option>
             </select>
           </div>

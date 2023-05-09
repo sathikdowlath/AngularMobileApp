@@ -6,7 +6,7 @@
     <p>Please book your first appointment of Physical consultation as per your convenience</p>
     <div>
         <mat-card-actions>
-            <button mat-button mat-raised-button color="primary" routerLink="/bookApp">Book Now</button>            
+            <button mat-button mat-raised-button color="primary" routerLink="/bookApp">Book Now</button>
         </mat-card-actions>
     </div>
 </mat-card>
@@ -14,7 +14,9 @@
 <mat-card *ngIf="this.appointmentListLength > 0">
 
     <!-- <p>patient-appointments works!</p> -->
-    <button class="above" mat-button mat-raised-button color="primary" routerLink="/bookApp">Add Appointment</button>
+
+    <h3>List of Your Appointment</h3>
+
     <table class="table table-striped">
         <thead>
             <tr>
@@ -36,7 +38,7 @@
                     <button mat-mini-fab color="warn" (click)="deleteAppointment(appointment.id)"
                         class="btn btn-sm btn-danger btn-delete-user" [disabled]="appointment.isDeleting">
                         <mat-icon>delete</mat-icon>
-                      </button>
+                    </button>
                     <!-- <button (click)="deleteAppointment(appointment.id)" class="btn btn-sm btn-danger btn-delete-user"
                         [disabled]="appointment.isDeleting">
                         <span *ngIf="appointment.isDeleting" class="spinner-border spinner-border-sm"></span>
@@ -51,4 +53,6 @@
             </tr>
         </tbody>
     </table>
+    <button class="below" mat-button mat-raised-button color="primary" routerLink="/bookApp">Make another
+        Appointment</button>
 </mat-card>

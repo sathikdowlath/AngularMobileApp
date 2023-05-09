@@ -2,15 +2,16 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { PatientHomeComponent } from './patient-home.component';
 
+
 describe('PatientHomeComponent', () => {
   let component: PatientHomeComponent;
   let fixture: ComponentFixture<PatientHomeComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ PatientHomeComponent ]
+      declarations: [PatientHomeComponent]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {

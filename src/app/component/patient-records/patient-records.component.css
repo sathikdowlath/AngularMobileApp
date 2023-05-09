@@ -1,3 +1,56 @@
-div {
+.container-boxs {
     margin: 10px 10px 10px 10px;
+}
+
+.header {
+    margin: 10px 10px 10px 10px;
+    font-family: 'Lucida Sans';
+    font-weight: 20px;
+}
+
+.button-icon {
+    border: 1px solid gray;
+    width: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+    margin: 2px;
+}
+
+.button-icon-div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+
+}
+
+button {
+    padding: 0px 10px;
+}
+
+.two {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: left;
+    gap: 10px;
+}
+
+.doctor-card-header-text {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: left;
+    gap: 10px;
+    margin-left: 0%;
+
+}
+
+.tp {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
 }

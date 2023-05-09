@@ -1,2 +1,18 @@
-<p>patient-home works!</p>
-<app-pill></app-pill>
+<!-- <p>patient-home works!</p>
+<app-pill></app-pill> -->
+<mat-card>
+    <img [src]="images[currentImageIndex]" alt="Slider Image">
+    <div class="slider-buttons">
+        <button mat-icon-button (click)="prevImage()">
+            <mat-icon>keyboard_arrow_left</mat-icon>
+        </button>
+        <button mat-icon-button (click)="nextImage()">
+            <mat-icon>keyboard_arrow_right</mat-icon>
+        </button>
+    </div>
+</mat-card>
+<div class="button-grid">
+    <button class="align-button" routerLink="/bookApp" mat-raised-button color="accent">Book Appointment</button>
+    <button class="align-button" routerLink="/patientRecords" mat-raised-button color="primary">View Records</button>
+    <button class="align-button" mat-raised-button color="primary">Pill Remainder</button>
+</div>

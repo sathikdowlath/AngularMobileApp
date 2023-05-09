@@ -1,12 +1,12 @@
-import {NgModule} from '@angular/core';
-import {Routes, RouterModule} from '@angular/router';
-import {HomeComponent} from './home/home.component';
-import {AboutComponent} from './about/about.component';
-import {CourseComponent} from './course/course.component';
-import {LoginComponent} from './component/login/login.component';
-import {CreateCourseComponent} from './create-course/create-course.component';
-import {AngularFireAuthGuard, hasCustomClaim, redirectUnauthorizedTo} from '@angular/fire/auth-guard';
-import {CreateUserComponent} from './create-user/create-user.component';
+import { NgModule } from '@angular/core';
+import { Routes, RouterModule } from '@angular/router';
+import { HomeComponent } from './home/home.component';
+import { AboutComponent } from './about/about.component';
+import { CourseComponent } from './course/course.component';
+import { LoginComponent } from './component/login/login.component';
+import { CreateCourseComponent } from './create-course/create-course.component';
+import { AngularFireAuthGuard, hasCustomClaim, redirectUnauthorizedTo } from '@angular/fire/auth-guard';
+import { CreateUserComponent } from './create-user/create-user.component';
 import { DashboardComponent } from './component/dashboard/dashboard.component';
 import { DoctorsComponent } from './component/doctors/doctors.component';
 import { PatientsComponent } from './component/patients/patients.component';
@@ -20,6 +20,7 @@ import { BookAppointmentComponent } from './component/book-appointment/book-appo
 import { MedicinesComponent } from './component/medicines/medicines.component';
 import { AddMedicineComponent } from './component/add-medicine/add-medicine.component';
 import { AddPrescriptionComponent } from './component/add-prescription/add-prescription.component';
+import { PatientRecordsComponent } from './component/patient-records/patient-records.component';
 
 const routes: Routes = [
   {
@@ -41,24 +42,24 @@ const routes: Routes = [
     component: AboutComponent
   },
   {
-    path:'dashboard',
-    component:DashboardComponent
+    path: 'dashboard',
+    component: DashboardComponent
   },
   {
-    path:'doctor',
-    component:DashboardComponent
+    path: 'doctor',
+    component: DashboardComponent
   },
   {
-    path:'patient',
-    component:PatientsComponent
+    path: 'patient',
+    component: PatientsComponent
   },
   {
-    path:'parent',
-    component:ParentComponent
+    path: 'parent',
+    component: ParentComponent
   },
   {
-    path:'admin',
-    component:AdminComponent
+    path: 'admin',
+    component: AdminComponent
   },
   {
     path: 'login',
@@ -77,29 +78,33 @@ const routes: Routes = [
     component: CourseComponent
   },
   {
-    path : 'doctorslist',
+    path: 'doctorslist',
     component: ListDoctorComponent
   },
   {
-    path:'addDoctor',
+    path: 'addDoctor',
     component: AddDoctorComponent
   },
   {
-    path:'bookApp',
+    path: 'bookApp',
     component: BookAppointmentComponent
   },
   {
-    path:'medicines',
+    path: 'medicines',
     component: MedicinesComponent
   },
   {
-    path:'addMedicine',
+    path: 'addMedicine',
     component: AddMedicineComponent
   },
   {
-    path:'addPrescription',
+    path: 'addPrescription',
     component: AddPrescriptionComponent
-  },  
+  },
+  {
+    path: 'patientRecords',
+    component: PatientRecordsComponent
+  },
   {
     path: '**',
     redirectTo: '/'

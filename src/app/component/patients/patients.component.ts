@@ -10,21 +10,21 @@ import { User } from 'src/app/model/user';
 })
 export class PatientsComponent implements OnInit {
 
-  currentUser : User = null;
-  constructor(private db: AngularFirestore,private appUserConfig: AppUserConfig) { }
+  currentUser: User = null;
+  constructor(private db: AngularFirestore, private appUserConfig: AppUserConfig) { }
 
   ngOnInit(): void {
-  this.getPatientDetails();  
+    this.getPatientDetails();
   }
 
 
-  getPatientDetails(){
-    this.db.doc("Users/"+this.appUserConfig.id)
-    .valueChanges()
-    .subscribe(userData => {
-      this.currentUser = userData;
+  getPatientDetails() {
+    this.db.doc("Users/" + this.appUserConfig.id)
+      .valueChanges()
+      .subscribe(userData => {
+        this.currentUser = userData;
         console.log(userData);
-    });
+      });
   }
 
 }

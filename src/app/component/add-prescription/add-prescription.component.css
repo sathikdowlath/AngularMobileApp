@@ -1,6 +1,9 @@
 .two {
     display: flex;
     flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
     margin-left: 0%;
     margin-right: 0%;
 }
