@@ -43,6 +43,7 @@ import { AddPrescriptionComponent } from './component/add-prescription/add-presc
 import { FormsModule } from '@angular/forms';
 import { PatientHomeComponent } from './component/patient-home/patient-home.component';
 import { PillComponent } from './pill/pill.component';
+import { DocPatientRecordsComponent } from './component/doc-patient-records/doc-patient-records.component';
 var CanvasJSChart = CanvasJSAngularChart.CanvasJSChart;
 
 @NgModule({
@@ -75,7 +76,8 @@ var CanvasJSChart = CanvasJSAngularChart.CanvasJSChart;
     AddMedicineComponent,
     AddPrescriptionComponent,
     PatientHomeComponent,
-    PillComponent
+    PillComponent,
+    DocPatientRecordsComponent
   ],
   imports: [
     FormsModule,

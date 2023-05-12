@@ -1,0 +1,56 @@
+<mat-card class="header"> Hey <b>{{this.currentUser.firstName}} {{this.currentUser.lastName}},</b><br> Here's your
+    History of Visit</mat-card>
+
+<div class="container-boxs" *ngFor="let appt of appointmentWithPrecription">
+    <mat-card class="doctor-card">
+        <div class="doctor-card-header">
+            <div class="doctor-card-header-text">
+                <img mat-card-avatar class="doctor-card-avatar"
+                    src="https://th.bing.com/th?id=OIP.WPYPa4GubQVLa0kQqXcfvwHaHa&w=250&h=250&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2"
+                    alt="Doctor Profile Picture">
+                <mat-card-title>{{appt.Appointment.doctorName}}</mat-card-title>
+            </div>
+        </div>
+        <mat-card-content>
+            <p>Specialty: Cardiology</p>
+            <p>{{appt.Appointment.appointmentDate}} ~> {{appt.Appointment.appointmentTime}}</p>
+            <p>Reason: {{appt.Appointment.reasonForVisit}}</p>
+            <p>Remarks: {{appt.Prescription.remarks}}</p>
+            <div class="two">
+                <button mat-raised-button color="primary" (click)="openDialog()">View Prescription</button>
+                <button mat-raised-button color="accent" routerLink="/bookApp">Book Follow-Up</button>
+            </div>
+            <div [hidden]="hideprics">
+                <hr>
+                <div class="tp">
+                    <p><b>Temperature: </b> {{appt.Prescription.temperature}}</p>
+                    <p><b>Pulse : </b> {{appt.Prescription.pulse}}</p>
+                </div>
+                <div *ngFor="let med of appt.Prescription.medicines ;index as i">
+                    <hr>
+
+                    <p><b>Medicine {{i+1}} </b>: {{med.medicine}}</p>
+                    <div class="button-icon-div">
+                        <div class="button-icon"><mat-icon>wb_sunny</mat-icon>
+                            <div>~ {{med.morning == true ? 1: 0}} </div>
+                        </div>
+                        <div class="button-icon"> <mat-icon>brightness_5</mat-icon>
+                            <div> ~ {{med.noon == true ? 1: 0}}</div>
+                        </div>
+                        <div class="button-icon"> <mat-icon>brightness_2</mat-icon>
+                            <div> ~ {{med.night== true ? 1: 0}}</div>
+                        </div>
+
+                    </div>
+                    <hr>
+
+                </div>
+            </div>
+
+
+
+        </mat-card-content>
+
+    </mat-card>
+
+</div>
